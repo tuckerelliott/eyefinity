@@ -15,10 +15,14 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1264px;
+  /* max-width: 1264px; */
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 header nav[aria-expanded="true"] {
@@ -45,6 +49,7 @@ header nav[aria-expanded="true"] {
   header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
+    align-items: center;
   }
 }
 
@@ -194,7 +199,7 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav[aria-expanded="true"] .nav-sections {
-    align-self: unset;
+    align-self: center;
   }
 
   header nav .nav-sections .nav-drop {
@@ -225,7 +230,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 2em;
+    gap: 10em;
     margin: 0;
     font-size: var(--body-font-size-xs);
   }

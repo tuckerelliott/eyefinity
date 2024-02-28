@@ -3,13 +3,26 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 16px;
 }
 
 .cards > ul > li {
   border: 1px solid var(--dark-color);
-  background-color: var(--background-color)
+  background-color: var(--background-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
+}
+
+.cards > ul >li a:any-link {
+  all: unset;
+  color: #005a96;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.cards > ul > li h4 {
+  font-size: 1.375rem;
 }
 
 .cards .cards-card-body {

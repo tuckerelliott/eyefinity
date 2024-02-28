@@ -12,21 +12,21 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --link-color: #005a96;
+  --link-hover-color: #005a96;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
+  --text-color: #58595b;
   --highlight-background-color: grey;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  --heading-font-family: "Nunito Sans";
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
+  --body-font-size-m: 1rem;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
 
@@ -39,7 +39,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 @font-face {
@@ -51,10 +51,10 @@
 
 @media (width >= 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
+    --heading-font-size-xxl: 2.5rem;
+    --heading-font-size-xl: 2.25rem;
+    --heading-font-size-l: 2rem;
+    --heading-font-size-m: 1.75rem;
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
   }
@@ -68,6 +68,8 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
+  text-align: center;
+  font-weight: 200;
 }
 
 body.appear {
@@ -82,7 +84,7 @@ h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.5;
   margin-top: 1em;
   margin-bottom: .5em;
   scroll-margin: calc(var(--nav-height) + 1em);
@@ -94,6 +96,11 @@ h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
+
+
+h1 {
+  font-family: "Nunito Sans";
+}
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -150,7 +157,7 @@ a.button:any-link, button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 3px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -199,7 +206,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1284px;
     margin: auto;
   }
 }
@@ -208,4 +215,6 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+  margin: auto;
+  max-width: 1376px;
 }
