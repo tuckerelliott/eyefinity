@@ -166,6 +166,14 @@ header nav .nav-sections {
   background-color: var(--overlay-color);
 }
 
+header nav .nav-quickLinks {
+  grid-area: sections;
+  flex: 1 1 auto;
+  display: none;
+  visibility: hidden;
+  background-color: var(--overlay-color);
+}
+
 header nav[aria-expanded="true"] .nav-sections {
   display: block;
   visibility: visible;
@@ -196,6 +204,19 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
+  }
+
+  header nav .nav-quickLinks {
+    grid-area: sections;
+    flex: 1 1 auto;
+    background-color: #023046;
+    display: block;
+    visibility: visible;
+    align-self: start;
+    position: absolute;
+    width: 100%;
+    margin-left: -40px;
+    height: 48px;
   }
 
   header nav[aria-expanded="true"] .nav-sections {
@@ -233,6 +254,31 @@ header nav .nav-sections ul > li > ul > li {
     gap: 10em;
     margin: 0;
     font-size: var(--body-font-size-xs);
+  }
+
+  header nav .nav-quickLinks ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    color: #FFF;
+    /* margin: 0; */
+    font-size: 0.875rem;
+    text-transform: capitalize;
+  }
+
+  header nav .nav-quickLinks ul li:nth-child(2) {
+    background-color: #FFF;
+    color:#023046;
+    padding: 0px 20px 20px 20px;
+  }
+
+  header nav .nav-quickLinks ul li:nth-child(7) {
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
+  header nav .nav-quickLinks ul li:last-child {
+    font-size: 1rem;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {

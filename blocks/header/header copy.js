@@ -101,25 +101,11 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['quickLinks', 'brand', 'sections', 'tools'];
+  const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
-
-  const quickLinks = nav.querySelector('.nav-quickLinks');
-  if (quickLinks) {
-    quickLinks.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((quickLinks) => {
-      if (quickLinks.querySelector('ul')) quickLinks.classList.add('nav-drop');
-      quickLinks.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = quickLinks.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(quickLinks);
-          quickLinks.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
-      });
-    });
-  }
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
