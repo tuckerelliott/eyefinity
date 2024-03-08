@@ -251,7 +251,9 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 10em;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
     margin: 0;
     font-size: var(--body-font-size-xs);
   }
